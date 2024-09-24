@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afri Book - Discover Your Roots</title>
+    <style>
+        :root {
+            --primary-color: #f9d77e; /* Yellow from logo */
+            --secondary-color: #f3a683; /* Orange from logo */
+            --accent-color: #55efc4; /* Green from logo */
+            --background-color: #e6f2ff; /* Baby blue */
+            --text-color: #333;
+            --header-bg: #000; /* Black header background */
+            --header-text: #fff; /* White text for header */
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--header-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        main {
+            margin-top: 5rem;
+            padding: 2rem 0;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-color);
+            padding: 4rem 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .book-item {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .book-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .book-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .book-info {
+            padding: 1rem;
+        }
+
+        .book-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--header-text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--header-bg);
+                padding: 1rem 0;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="/api/placeholder/50/50" alt="Afri Book Logo">
+                    <span>Afri Book</span>
+                </div>
+                <button class="menu-toggle">&#9776;</button>
+                <nav>
+                    <ul>
+                        <li><a href="#books">Books</a></li>
+                        <li><a href="#audio">Audio</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Discover Your Roots Through Literature</h1>
+                <p>Explore our curated collection of African and African-American literature.</p>
+                <a href="#books" class="cta-button">Start Your Journey</a>
+            </section>
+            <section id="books" class="section">
+                <h2>Featured Books</h2>
+                <div class="book-grid">
+                    <div class="book-item">
+                        <img src="/api/placeholder/200/250" alt="Book cover">
+                        <div class="book-info">
+                            <h3>Things Fall Apart</h3>
+                            <p>Chinua Achebe</p>
+                        </div>
+                    </div>
+                    <div class="book-item">
+                        <img src="/api/placeholder/200/250" alt="Book cover">
+                        <div class="book-info">
+                            <h3>Americanah</h3>
+                            <p>Chimamanda Ngozi Adichie</p>
+                        </div>
+                    </div>
+                    <div class="book-item">
+                        <img src="/api/placeholder/200/250" alt="Book cover">
+                        <div class="book-info">
+                            <h3>Half of a Yellow Sun</h3>
+                            <p>Chimamanda Ngozi Adichie</p>
+                        </div>
+                    </div>
+                    <div class="book-item">
+                        <img src="/api/placeholder/200/250" alt="Book cover">
+                        <div class="book-info">
+                            <h3>The Color Purple</h3>
+                            <p>Alice Walker</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="audio" class="section">
+                <h2>Audio Books</h2>
+                <p>Immerse yourself in our collection of audio books. Perfect for multitaskers and auditory learners.</p>
+                <!-- Audio player would be implemented here -->
+            </section>
+            <section id="donate" class="section">
+                <h2>Support Our Mission</h2>
+                <p>Your generous donations help us expand our library and reach more readers.</p>
+                <a href="#" class="cta-button">Make a Difference</a>
+            </section>
+            <section id="membership" class="section">
+                <h2>Join Our Community</h2>
+                <p>Become a member to unlock exclusive content, early releases, and connect with fellow literature enthusiasts.</p>
+                <a href="#" class="cta-button">Sign Up Now</a>
+            </section>
+            <section id="about" class="section">
+                <h2>About Us</h2>
+                <p>Afri Book is dedicated to promoting and preserving African and African-American literature. Our mission is to connect readers with their cultural roots through the power of storytelling.</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Afri Book. Empowering minds through literature.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
